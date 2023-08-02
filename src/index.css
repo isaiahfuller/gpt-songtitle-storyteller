@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 dark:bg-slate-900;
+  @apply text-slate-950 dark:text-slate-100;
+  @apply flex flex-col h-screen;
+}
+
+input[type="text"] {
+  @apply bg-inherit border rounded p-1;
+}
+
+form {
+  @apply flex items-center justify-around;
+}
+
+h1 {
+  @apply text-4xl py-2;
+}
+
+h2 {
+  @apply text-2xl py-2;
+}
+
+.main {
+  @apply w-full lg:w-[900px] 2xl:w-[1280px];
+  @apply p-5 m-auto;
+  /* @apply overflow-scroll; */
+}
+
+.button {
+  @apply border rounded p-1;
+}
+
+.track-list {
+  @apply max-h-52 border;
+  @apply overflow-y-scroll;
+}
+
+.track-details {
+  @apply flex mx-auto my-1 items-center;
+}
+.track-details * {
+  @apply p-0.5;
+}
+
+.story {
+  @apply whitespace-pre-wrap;
+}
