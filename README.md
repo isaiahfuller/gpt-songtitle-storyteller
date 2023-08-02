@@ -1,7 +1,7 @@
 
 # gpt-songtitle-storyteller - [Live](https://isaiah.moe/storyteller/)
 
-Gets a gpt-generated story based on the titles of your top 10 songs on last.fm.
+Gets a gpt-generated story based on the titles of your top 10 songs on last.fm.  
 Built with React, TailwindCSS, and Express
 
 <details>
