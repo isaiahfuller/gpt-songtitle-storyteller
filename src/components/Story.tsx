@@ -30,8 +30,7 @@ export default function Story(props: StoryProps) {
       if (e.response?.status === 500) setStatus(1);
       else setStatus(2);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [trackNames]);
 
   if (status === 0) return <p>Loading - can take a while...</p>;
   if (status === 1) return <p>Server error</p>;
