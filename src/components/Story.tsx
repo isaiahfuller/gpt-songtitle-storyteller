@@ -21,14 +21,19 @@ export default function Story(props: StoryProps) {
       })
         .then((res) => res.json())
         .then((res) => {
-          setStory(res.story);
+          setStory(res.story.replace(/\\n/g, "\n"));
           setUsedPhrases(res.usedPhrases);
           setUnusedPhrases(res.unusedPhrases);
           setStatus(100);
+        })
+        .catch((error) => {
+          if(error) {
+            console.log(error)
+            setStatus(1)
+          }
         });
     } catch (e) {
-      if (e.response?.status === 500) setStatus(1);
-      else setStatus(2);
+      setStatus(2);
     }
   }, [trackNames]);
 
