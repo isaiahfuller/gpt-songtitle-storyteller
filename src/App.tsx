@@ -10,7 +10,7 @@ function App() {
 
   async function getTracks() {
     const baseUrl: string =
-      "http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks";
+      "https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks";
     const options: string = `&user=${lfmUsername}&api_key=${
       import.meta.env.VITE_LASTFM_API
     }&format=json&limit=10`;
@@ -25,7 +25,12 @@ function App() {
 
   return (
     <div className="main">
-      <form onSubmit={e => {e.preventDefault(); getTracks()}}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          getTracks();
+        }}
+      >
         <span>
           <label htmlFor="lfm">Last.fm Username: </label>
           <input
