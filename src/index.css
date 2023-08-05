@@ -12,6 +12,14 @@ input[type="text"] {
   @apply bg-inherit border rounded p-1;
 }
 
+select {
+  @apply bg-inherit border rounded p-1;
+}
+
+option {
+  @apply bg-slate-50 dark:bg-slate-900;
+}
+
 form {
   @apply flex items-center justify-around;
 }
@@ -48,4 +56,16 @@ h2 {
 
 .story {
   @apply whitespace-pre-wrap;
+}
+
+.lfm-form {
+  @apply flex justify-between items-end sm:items-baseline
+}
+
+.form-input {
+  @apply flex p-1 items-center;
+}
+
+.form-input * {
+  @apply px-1
 }
