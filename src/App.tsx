@@ -4,7 +4,7 @@ import SongList from "./components/SongList";
 import Story from "./components/Story";
 
 function App() {
-  const [lfmUsername, setLfmUsername] = useState<string>("");
+  const [lfmUsername, setLfmUsername] = useState<string>("rj");
   const [lfmPeriod, setLfmPeriod] = useState<string>("overall");
   const [trackNames, setTrackNames] = useState<string[]>([]);
   const [trackData, setTrackData] = useState<LastFmTrack[]>([]);
